@@ -1,0 +1,116 @@
+.benefits {
+  background-color: #f7f7f7;
+  padding: 13px 0;
+  &__card {
+    margin: 40px;
+    padding: 30px 21px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #e8e9ed;
+    border-radius: 5px;
+    &-title {
+      font: $Raleway-400-35;
+      font-size: 30px;
+      text-align: left;
+      margin: 27px 0 10px;
+      min-height: 72px;
+    }
+    &-text {
+      text-align: left;
+      font: $Open-400-16;
+      font-size: 14px;
+    }
+    &-line {
+      display: none;
+    }
+    &-topTitle {
+      margin: 31px 20px 10px 20px;
+    }
+    &-topText {
+      padding-left: 20px;
+    }
+    &-last {
+      padding: 0;
+    }
+    &-bottomImg {
+      background-color: $sky;
+      border: 1px solid #e8e9ed;
+      border-radius: 5px;
+      margin: 16px auto 0;
+      max-height: 200px;
+      & img {
+        width: 100%;
+        max-width: 350px;
+        min-width: 270px;
+        margin: 25px 0 0 -50px;
+      }
+    }
+  }
+}
+
+.firstLine {
+  border-bottom: solid 4px $pink;
+}
+.secondLine {
+  border-bottom: solid 4px $lightBlue;
+}
+.lastLine {
+  border-bottom: solid 4px $sky;
+  margin-left: 20px;
+}
+
+@media (min-width: 1000px) {
+  .benefits {
+    padding: 70px;
+    &__card {
+      max-width: 1124px;
+      height: 370px;
+      margin: 37px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & img {
+        height: 100%;
+        margin: 0 2%;
+      }
+      &-first {
+        flex-direction: row-reverse;
+      }
+      &-largeCont {
+        max-width: 420px;
+        background-color: #fff;
+      }
+      &-line {
+        display: block;
+        height: 40px;
+        width: 330px;
+      }
+      &-last {
+        background-color: #f7f7f7;
+        border: none;
+      }
+    }
+  }
+  .lastCard_container {
+    height: 100%;
+    width: 60%;
+    max-width: 620px;
+    padding-right: 200px;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #e8e9ed;
+    &-fig {
+      width: 440px;
+      max-height: none;
+      margin: 0;
+      height: 100%;
+      border: 1px solid #e8e9ed;
+      & img {
+        margin-top: 40px;
+        margin-left: -12px;
+      }
+    }
+  }
+}

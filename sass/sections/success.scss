@@ -1,0 +1,41 @@
+.success {
+  margin: 13px 0 50px;
+  text-align: center;
+  &__title {
+    font: $Raleway-300-32;
+    width: 300px;
+    margin: 0 auto;
+  }
+  &__figure {
+    margin: 25px 0 19px;
+    width: 100%;
+    &-img {
+      width: 50px;
+    }
+    &-capt {
+      font: $Raleway-800-20;
+      letter-spacing: 6px;
+      margin-top: 13px;
+    }
+  }
+  &__text {
+    font: $Raleway-400-17;
+    color: #a5a5a5;
+    width: 150px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .success {
+    &__title {
+      width: 100%;
+    }
+    &__flex {
+      display: flex;
+      width: 60%;
+      margin: 75px auto 122px;
+      justify-content: space-around;
+    }
+  }
+}

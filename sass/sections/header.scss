@@ -1,0 +1,99 @@
+.header {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  &__nav {
+    min-height: 70px;
+    &-title {
+      font: $Raleway-300-32;
+      color: $lightBlue;
+      display: inline-block;
+      line-height: 70px;
+      margin-left: 25px;
+    }
+    &-btn {
+      color: $lightBlue;
+      position: absolute;
+      right: 20px;
+      top: 23px;
+      cursor: pointer;
+    }
+    &-list {
+      display: none;
+    }
+  }
+}
+
+.nav-item {
+  font: $Open-700-11;
+  margin: 15px 0;
+  letter-spacing: 3.3px;
+  &__link {
+    color: #a5a5a5;
+    &-active {
+      color: #000;
+    }
+  }
+}
+
+.toggleBtn {
+  height: 24px;
+  width: 21px;
+  background-color: transparent;
+  border: none;
+  & ul {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+    position: fixed;
+    background-color: #fff;
+    padding: 20px 25px 30px;
+    width: 100%;
+    text-align: left;
+    left: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29);
+  }
+  & > div {
+    height: 2px;
+    width: 100%;
+    margin: 5px 0;
+    background-color: $lightBlue;
+    border-radius: 2px;
+    transition: all 0.5s;
+    transform-origin: left;
+  }
+  &:hover div:first-child {
+    transform: rotate(45deg);
+  }
+  &:hover div:nth-child(2) {
+    opacity: 0;
+  }
+  &:hover div:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  &:hover ul {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1000px) {
+  .toggleBtn {
+    display: none;
+    width: 100%;
+  }
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 7% 0 8%;
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      width: 40%;
+    }
+  }
+}

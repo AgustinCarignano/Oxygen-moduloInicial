@@ -1,0 +1,15 @@
+{
+  "name": "modulo1",
+  "version": "1.0.0",
+  "description": "Proyecto del modulo 1 de Oxygen Training",
+  "main": "index.js",
+  "scripts": {
+    "sass-build": "node-sass --include-path sass sass/index.scss style.css -w"
+  },
+  "keywords": [],
+  "author": "Agustin Carignano",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}

@@ -1,0 +1,123 @@
+.contact {
+  margin: 75px 30px;
+  text-align: left;
+  max-width: 420px;
+  &__title {
+    font: $Raleway-400-35;
+    font-size: 40px;
+  }
+  &__text {
+    font: $Open-400-16;
+    margin-bottom: 40px;
+  }
+  &__dates {
+    margin-bottom: 15px;
+    &-text {
+      display: inline-block;
+      margin: 0 20px 0 10px;
+      font: $Open-600-16;
+      color: #a5a5a5;
+    }
+  }
+  &__form {
+    margin-top: 56px;
+    &-label {
+      display: block;
+      font: $Open-600-16;
+      font-size: 11px;
+      line-height: 15px;
+      color: $lightBlue;
+    }
+    &-input {
+      display: block;
+      width: 100%;
+      max-width: 440px;
+      margin: 20px 0 42px;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #95989a;
+      font: $Open-400-16;
+      font-size: 14px;
+    }
+    &-submitCont {
+      text-align: right;
+    }
+    &-submit {
+      margin: 30px 0 45px;
+      width: 225px;
+      height: 60px;
+      font: $Open-700-13;
+      background-color: $lightBlue;
+      color: #fff;
+      border: none;
+      border-radius: 35px;
+      box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+      cursor: pointer;
+    }
+  }
+}
+
+.checkContainer {
+  position: relative;
+  height: 150px;
+  max-width: 450px;
+  &__box {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    appearance: none;
+    border: 1px solid #95989a;
+    border-radius: 4px;
+    background-clip: content-box;
+    padding: 3px;
+    cursor: pointer;
+    &::after {
+      content: url("images/tick.svg");
+      display: none;
+      color: $lightBlue;
+      margin-left: 2.5px;
+      margin-top: 1px;
+    }
+    &:checked::after {
+      display: block;
+    }
+  }
+  &__terms {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 86%;
+    font: $Open-400-16;
+    line-height: 16px;
+    font-size: 12px;
+    color: #707070;
+  }
+}
+
+@media (min-width: 1000px) {
+  .contact {
+    max-width: 900px;
+    margin: 170px auto 20px;
+    display: flex;
+    justify-content: space-between;
+    &__large {
+      width: 50%;
+    }
+    &__title {
+      font-size: 49px;
+      margin-bottom: 20px;
+    }
+    &__form {
+      margin: 0;
+      width: 50%;
+      &-submit {
+        margin-top: 0;
+      }
+    }
+    &__dates {
+      display: inline-block;
+    }
+  }
+}
