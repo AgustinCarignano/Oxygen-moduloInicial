@@ -1,4 +1,15 @@
 .prices {
+  position: relative;
+  &__currentOption {
+    position: absolute;
+    font: $Open-300-40;
+    font-size: 13px;
+    color: #a5a5a5;
+    top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
   &__title {
     font: $Raleway-400-35;
     text-align: center;
@@ -56,6 +67,16 @@
       cursor: pointer;
     }
   }
+}
+
+.priceUnit {
+  font-size: 15px;
+  margin-left: -8px;
+}
+
+.selected {
+  color: black;
+  font-weight: 600;
 }
 
 .basic {
