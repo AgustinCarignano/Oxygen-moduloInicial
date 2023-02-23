@@ -9,6 +9,7 @@
     left: 0;
     right: 0;
     text-align: center;
+    cursor: pointer;
   }
   &__title {
     font: $Raleway-400-35;
@@ -136,6 +137,9 @@
     &__title {
       grid-column-start: 1;
       grid-column-end: 4;
+    }
+    &__currentOption {
+      top: 75px;
     }
     &__card {
       margin: 0;

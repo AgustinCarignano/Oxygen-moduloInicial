@@ -293,7 +293,8 @@ ul {
     top: 20px;
     left: 0;
     right: 0;
-    text-align: center; }
+    text-align: center;
+    cursor: pointer; }
   .prices__title {
     font: normal 400 35px/40px "Raleway", sans-serif;
     text-align: center;
@@ -400,6 +401,8 @@ ul {
     .prices__title {
       grid-column-start: 1;
       grid-column-end: 4; }
+    .prices__currentOption {
+      top: 75px; }
     .prices__card {
       margin: 0;
       max-width: 372px;
@@ -602,7 +605,8 @@ ul {
       width: 5px;
       height: 5px;
       border-radius: 15px;
-      background-color: #505050; }
+      background-color: #505050;
+      cursor: pointer; }
 
 .active {
   background-color: #fff; }

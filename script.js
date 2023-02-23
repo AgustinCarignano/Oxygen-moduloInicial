@@ -101,7 +101,7 @@ form.addEventListener("submit", async (e) => {
     email.value = "";
   }
 
-  name.addEventListener("click", (e) => {
+  name.addEventListener("click", () => {
     name.classList.remove("alert");
   });
   email.addEventListener("click", () => {
@@ -109,7 +109,7 @@ form.addEventListener("submit", async (e) => {
   });
 });
 
-//Evento para habilitar o deshabilitar el formulario al checkear el imput
+//Evento para habilitar o deshabilitar el formulario al checkear el input
 termsBox.addEventListener("change", () => {
   if (termsBox.checked) {
     submitBtn.disabled = false;
@@ -118,14 +118,14 @@ termsBox.addEventListener("change", () => {
   }
 });
 
-//Dispara la ventana modal al cabo de 5 segundo, si no se mostró anteriormente
+//Dispara la ventana modal al cabo de 5 segundos, si no se mostró anteriormente
 setTimeout(() => {
   if (showModal) {
     modalBehavior();
   }
 }, 5000);
 
-//Función que se ejecuta al aparecer la ventana modal, asignandole el comportamiento deseado.
+//Función que muestra la ventana modal, asignandole el comportamiento deseado.
 function modalBehavior() {
   showModal = false;
   localStorage.setItem("showModal", showModal);
@@ -237,6 +237,7 @@ class Slider {
       this.changeImg("back");
       this.lastMove = new Date();
     };
+    this.selectImg();
     this.lastMove = null;
   }
 
@@ -305,6 +306,31 @@ class Slider {
         positionMarkItems[index].classList.remove("active");
         positionMarkItems[totalImg - 1].classList.add("active");
       }
+    }
+  }
+
+  /**
+   * Metodo que asigna funcionalidad a cada punto del slider para poder seleccionar la imagen correspondiente.
+   */
+  selectImg() {
+    const imgArray = this.filterByNodeName("img");
+    const positionMarksDiv = this.filterByClass("div", "slider__position");
+    const positionMarkItems = [
+      ...positionMarksDiv.getElementsByClassName("slider__position-item"),
+    ];
+    for (let index = 0; index < positionMarkItems.length; index++) {
+      positionMarkItems[index].addEventListener("click", () => {
+        for (let j = 0; j < imgArray.length; j++) {
+          if (j === index) {
+            imgArray[j].hidden = false;
+            positionMarkItems[j].classList.add("active");
+          } else {
+            imgArray[j].hidden = true;
+            positionMarkItems[j].classList.remove("active");
+          }
+        }
+        this.lastMove = new Date();
+      });
     }
   }
 
