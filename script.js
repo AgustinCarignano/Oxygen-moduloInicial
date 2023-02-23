@@ -230,14 +230,16 @@ class Slider {
     this.nextImg = this.filterByClass("span", "nextImg");
     this.prevImg = this.filterByClass("span", "prevImg");
     this.nextImg.onclick = () => {
-      this.changeImg("next");
+      this.handleControlsClick("next");
       this.lastMove = new Date();
     };
     this.prevImg.onclick = () => {
-      this.changeImg("back");
+      this.handleControlsClick("back");
       this.lastMove = new Date();
     };
-    this.selectImg();
+    this.imgList = this.filterByNodeName("img");
+    this.dotsList = this.getDotsList();
+    this.handleDotsClick();
     this.lastMove = null;
   }
 
@@ -255,7 +257,7 @@ class Slider {
   }
 
   /**
-   * Funcion para obtener un elemento (o elementos) de los children del elemento padre asignado en el constructor
+   * Metodo para obtener un elemento (o elementos) de los children del elemento padre asignado en el constructor
    * @param {String} nodeName nombre del tipo de elemento buscado en los children
    * @param {String} className nombre de la clase para filtar los elementos que coincidan con ella
    * @returns Elemento que cumple las condiciones anteriores
@@ -270,68 +272,64 @@ class Slider {
   }
 
   /**
-   * Funcion que se ejecuta al car click sobre los controles, mostrando la imagen siguiente o anterior, segun el parametro
-   * @param {String} direction direccion en la que se deben mover las fotos: "next" || "back"
+   * Metodo para obtener la lista de elementos que represetan a los puntos de posicion del slider
    */
-  changeImg(direction) {
-    const imgArray = this.filterByNodeName("img");
+  getDotsList() {
     const positionMarksDiv = this.filterByClass("div", "slider__position");
     const positionMarkItems = [
       ...positionMarksDiv.getElementsByClassName("slider__position-item"),
     ];
-    const index = imgArray.findIndex((item) => !item.hidden);
-    const totalImg = imgArray.length;
-    direction = direction.trim().toLowerCase();
-    if (direction === "next") {
-      if (index < totalImg - 1) {
-        imgArray[index].hidden = true;
-        imgArray[index + 1].hidden = false;
-        positionMarkItems[index].classList.remove("active");
-        positionMarkItems[index + 1].classList.add("active");
-      } else {
-        imgArray[index].hidden = true;
-        imgArray[0].hidden = false;
-        positionMarkItems[index].classList.remove("active");
-        positionMarkItems[0].classList.add("active");
-      }
-    } else {
-      if (index > 0) {
-        imgArray[index].hidden = true;
-        imgArray[index - 1].hidden = false;
-        positionMarkItems[index].classList.remove("active");
-        positionMarkItems[index - 1].classList.add("active");
-      } else {
-        imgArray[index].hidden = true;
-        imgArray[totalImg - 1].hidden = false;
-        positionMarkItems[index].classList.remove("active");
-        positionMarkItems[totalImg - 1].classList.add("active");
-      }
+    return positionMarkItems;
+  }
+
+  /**
+   * Metodo que se ejecuta en el onclick de los controles del slider
+   * @param {String} type indica el sentido de movimiento del slider. "next" || "back"
+   */
+  handleControlsClick(type) {
+    const index = this.imgList.findIndex((item) => !item.hidden);
+    const lastImgIndex = this.imgList.length - 1;
+    type = type.trim().toLowerCase();
+    let target;
+    switch (type) {
+      case "next":
+        target = index === lastImgIndex ? 0 : index + 1;
+        break;
+      case "back":
+        target = index === 0 ? lastImgIndex : index - 1;
+        break;
+      default:
+        break;
+    }
+    this.moveAt(target);
+  }
+
+  /**
+   * Metodo para asignar funcionalidad a los puntos que marcan la posicion del slider
+   */
+  handleDotsClick() {
+    for (let index = 0; index < this.dotsList.length; index++) {
+      this.dotsList[index].addEventListener("click", () => {
+        this.moveAt(index);
+      });
     }
   }
 
   /**
-   * Metodo que asigna funcionalidad a cada punto del slider para poder seleccionar la imagen correspondiente.
+   * Metodo que determina que imagen aparece en el slider
+   * @param {Number} target El indice de la imagen que se va a mostrar en pantalla luego de la ejecucion
    */
-  selectImg() {
-    const imgArray = this.filterByNodeName("img");
-    const positionMarksDiv = this.filterByClass("div", "slider__position");
-    const positionMarkItems = [
-      ...positionMarksDiv.getElementsByClassName("slider__position-item"),
-    ];
-    for (let index = 0; index < positionMarkItems.length; index++) {
-      positionMarkItems[index].addEventListener("click", () => {
-        for (let j = 0; j < imgArray.length; j++) {
-          if (j === index) {
-            imgArray[j].hidden = false;
-            positionMarkItems[j].classList.add("active");
-          } else {
-            imgArray[j].hidden = true;
-            positionMarkItems[j].classList.remove("active");
-          }
-        }
-        this.lastMove = new Date();
-      });
+  moveAt(target) {
+    for (let j = 0; j < this.imgList.length; j++) {
+      if (j === target) {
+        this.imgList[j].hidden = false;
+        this.dotsList[j].classList.add("active");
+      } else {
+        this.imgList[j].hidden = true;
+        this.dotsList[j].classList.remove("active");
+      }
     }
+    this.lastMove = new Date();
   }
 
   /**
@@ -340,7 +338,8 @@ class Slider {
    */
   autoChange(interval) {
     setInterval(() => {
-      new Date() - this.lastMove >= interval && this.changeImg("next");
+      new Date() - this.lastMove >= interval &&
+        this.handleControlsClick("next");
     }, interval);
   }
 }
