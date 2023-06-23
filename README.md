@@ -12,8 +12,8 @@ For the firt module, the porpose was create the view itself, and for the second 
 
 ## Links
 
-- [Figma design]('https://www.figma.com/file/n7pSj9KadTb6Pb6pmf10oT/OXYGEN-Shop?node-id=4%3A560&mode=dev')
-- [Web page]("https://agustincarignano.github.io/Oxygen-moduloInicial/")
+- [Figma design](https://www.figma.com/file/n7pSj9KadTb6Pb6pmf10oT/OXYGEN-Shop?node-id=4%3A560&mode=dev)
+- [Web page](https://agustincarignano.github.io/Oxygen-moduloInicial/)
 
 ## Technical characteristics
 
