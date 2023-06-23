@@ -7,7 +7,8 @@
 
 body {
   min-width: 320px;
-  padding-top: 70px; }
+  padding-top: 70px;
+  position: relative; }
 
 a:visited,
 a:link,
@@ -16,6 +17,23 @@ a:active {
 
 ul {
   list-style: none; }
+
+.arrowUp {
+  background-color: #f7f7f7;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  padding: 10px;
+  margin: 0 20px 20px auto;
+  border: none;
+  position: absolute;
+  bottom: 90px;
+  right: 0;
+  cursor: pointer; }
+  .arrowUp img {
+    width: 30px; }
+  .arrowUp:hover {
+    background-color: #dfdfdf; }
 
 .opening {
   text-align: center; }
@@ -35,7 +53,10 @@ ul {
     border: none;
     background-color: #08a6e4;
     margin: 28px auto 50px;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all 0.3s; }
+    .opening__btn:hover {
+      transform: scale(1.1); }
   .opening__image {
     width: 100%;
     height: 270px;
@@ -74,7 +95,8 @@ ul {
       top: 23px;
       cursor: pointer; }
     .header__nav-list {
-      display: none; }
+      display: none;
+      margin-left: 25px; }
 
 .nav-item {
   font: normal 700 11px/1 "Open Sans", sans-serif;
@@ -90,17 +112,6 @@ ul {
   width: 21px;
   background-color: transparent;
   border: none; }
-  .toggleBtn ul {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.3s linear;
-    position: fixed;
-    background-color: #fff;
-    padding: 20px 25px 30px;
-    width: 100%;
-    text-align: left;
-    left: 0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29); }
   .toggleBtn > div {
     height: 2px;
     width: 100%;
@@ -109,15 +120,31 @@ ul {
     border-radius: 2px;
     transition: all 0.5s;
     transform-origin: left; }
-  .toggleBtn:hover div:first-child {
-    transform: rotate(45deg); }
-  .toggleBtn:hover div:nth-child(2) {
-    opacity: 0; }
-  .toggleBtn:hover div:nth-child(3) {
-    transform: rotate(-45deg); }
-  .toggleBtn:hover ul {
-    visibility: visible;
-    opacity: 1; }
+
+.changeBtn div:first-child {
+  transform: rotate(45deg); }
+
+.changeBtn div:nth-child(2) {
+  opacity: 0; }
+
+.changeBtn div:nth-child(3) {
+  transform: rotate(-45deg); }
+
+.show {
+  display: block;
+  overflow: hidden;
+  animation: showNavBar 0.3s linear 0s; }
+
+.loadBar {
+  width: 0%;
+  height: 5px;
+  background-image: linear-gradient(to right, #ff5f6d, #ffc371); }
+
+@keyframes showNavBar {
+  0% {
+    height: 0px; }
+  100% {
+    height: 120px; } }
 
 @media (min-width: 1000px) {
   .toggleBtn {
@@ -259,55 +286,77 @@ ul {
         margin-top: 40px;
         margin-left: -12px; } }
 
-.prices__title {
-  font: normal 400 35px/40px "Raleway", sans-serif;
-  text-align: center;
-  margin: 53px 0 0 0; }
-
-.prices__card {
-  width: 80%;
-  border-radius: 18px;
-  margin: 28px auto;
-  min-height: 277px;
-  border: 1px solid black;
+.prices {
   position: relative; }
-  .prices__card-left {
-    width: 50%;
+  .prices__currentOption {
     position: absolute;
-    top: 80px;
-    left: 0;
-    text-align: center; }
-  .prices__card-right {
-    width: 45%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 15px;
-    font: normal 400 16px/23px "Open Sans", sans-serif;
-    font-size: 14px; }
-  .prices__card-title {
-    font: normal 700 20px/24px "Raleway", sans-serif;
-    color: #13253b; }
-  .prices__card-price {
-    font: normal 300 46px/64px "Open Sans", sans-serif; }
-  .prices__card-offer {
-    font: normal 700 13px/18px "Open Sans", sans-serif;
-    color: #13253b; }
-  .prices__card-item {
-    margin: 20px 0; }
-  .prices__card-btn {
-    font: normal 700 13px/18px "Open Sans", sans-serif;
-    color: #fff;
-    position: absolute;
-    bottom: -25px;
+    font: normal 300 46px/64px "Open Sans", sans-serif;
+    font-size: 13px;
+    color: #a5a5a5;
+    top: 20px;
     left: 0;
     right: 0;
-    margin: 0 auto;
-    width: 150px;
-    height: 50px;
-    border-radius: 23px;
-    border: none;
+    text-align: center;
     cursor: pointer; }
+  .prices__title {
+    font: normal 400 35px/40px "Raleway", sans-serif;
+    text-align: center;
+    margin: 53px 0 0 0; }
+  .prices__card {
+    width: 80%;
+    border-radius: 18px;
+    margin: 28px auto;
+    min-height: 277px;
+    border: 1px solid black;
+    position: relative; }
+    .prices__card-left {
+      width: 50%;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      text-align: center; }
+    .prices__card-right {
+      width: 45%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 15px;
+      font: normal 400 16px/23px "Open Sans", sans-serif;
+      font-size: 14px; }
+    .prices__card-title {
+      font: normal 700 20px/24px "Raleway", sans-serif;
+      color: #13253b; }
+    .prices__card-price {
+      font: normal 300 46px/64px "Open Sans", sans-serif; }
+    .prices__card-offer {
+      font: normal 700 13px/18px "Open Sans", sans-serif;
+      color: #13253b; }
+    .prices__card-item {
+      margin: 20px 0; }
+    .prices__card-btn {
+      font: normal 700 13px/18px "Open Sans", sans-serif;
+      color: #fff;
+      position: absolute;
+      bottom: -25px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 150px;
+      height: 50px;
+      border-radius: 23px;
+      border: none;
+      transition: all 0.2s;
+      cursor: pointer; }
+      .prices__card-btn:hover {
+        transform: scale(1.1); }
+
+.priceUnit {
+  font-size: 15px;
+  margin-left: -8px; }
+
+.selected {
+  color: black;
+  font-weight: 600; }
 
 .basic-card {
   border: 1px solid #fb3b64; }
@@ -320,8 +369,6 @@ ul {
 
 .pro-card {
   border: 1px solid #07ace6;
-  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
-  transform: scale(1.1);
   margin-top: 70px; }
 
 .pro-price {
@@ -358,6 +405,8 @@ ul {
     .prices__title {
       grid-column-start: 1;
       grid-column-end: 4; }
+    .prices__currentOption {
+      top: 75px; }
     .prices__card {
       margin: 0;
       max-width: 372px;
@@ -380,7 +429,22 @@ ul {
         margin: 0 0 20px 20px; }
       .prices__card-item {
         width: fit-content;
-        margin: 0; } }
+        margin: 0; }
+  .basic-card {
+    transition: all 0.3s; }
+    .basic-card:hover {
+      box-shadow: 5px 10px 27px rgba(251, 59, 101, 0.3);
+      transform: scale(1.1); }
+  .pro-card {
+    transition: all 0.3s; }
+    .pro-card:hover {
+      box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.3);
+      transform: scale(1.1); }
+  .premium-card {
+    transition: all 0.3s; }
+    .premium-card:hover {
+      box-shadow: 5px 10px 27px rgba(85, 223, 179, 0.3);
+      transform: scale(1.1); } }
 
 .contact {
   margin: 75px 30px;
@@ -429,7 +493,12 @@ ul {
       border: none;
       border-radius: 35px;
       box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
-      cursor: pointer; }
+      cursor: pointer;
+      transition: all 0.3s; }
+      .contact__form-submit:hover {
+        transform: scale(1.1); }
+      .contact__form-submit:disabled {
+        background-color: #08a6e495; }
 
 .checkContainer {
   position: relative;
@@ -457,13 +526,17 @@ ul {
       display: block; }
   .checkContainer__terms {
     position: absolute;
-    right: 10px;
+    right: 0;
     top: 0;
-    width: 86%;
+    width: 90%;
     font: normal 400 16px/23px "Open Sans", sans-serif;
     line-height: 16px;
     font-size: 12px;
     color: #707070; }
+
+.alert {
+  outline: solid 2px red;
+  border-radius: 5px; }
 
 @media (min-width: 1000px) {
   .contact {
@@ -515,3 +588,123 @@ ul {
     margin: 0 auto; }
   .footer__right {
     width: 45%; } }
+
+.slider {
+  max-width: 600px;
+  margin: 80px auto 30px;
+  background-color: black;
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden; }
+  .slider > img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    animation: showImg 0.5s cubic-bezier(0.14, 0.65, 0.56, 1.04) 0s; }
+  .slider__controls {
+    position: absolute;
+    top: 45%;
+    cursor: pointer; }
+    .slider__controls img {
+      width: 40px; }
+  .slider-prevImg {
+    left: 10px; }
+  .slider-nextImg {
+    right: 10px;
+    rotate: 180deg; }
+  .slider__position {
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .slider__position-item {
+      width: 5px;
+      height: 5px;
+      border-radius: 15px;
+      background-color: #505050;
+      cursor: pointer; }
+
+.active {
+  background-color: #fff; }
+
+@keyframes showImg {
+  0% {
+    margin-left: 100%; }
+  100% {
+    margin-left: 0%; } }
+
+@media (min-width: 1000px) {
+  .slider {
+    max-width: 800px;
+    margin-top: 100px;
+    margin-bottom: -40px; }
+    .slider > img {
+      height: 60vh; } }
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8); }
+  .modal__content {
+    position: fixed;
+    z-index: 1000;
+    text-align: center;
+    background-color: #fff;
+    color: #08a6e4;
+    width: 80%;
+    max-width: 450px;
+    height: 60vh;
+    top: 20vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px; }
+    .modal__content-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      border: none;
+      background-color: transparent; }
+      .modal__content-btn > img {
+        width: 30px; }
+    .modal__content-title {
+      margin-top: 40px;
+      font: normal 400 35px/40px "Raleway", sans-serif; }
+  .modal__form {
+    margin-top: 40px; }
+    .modal__form-label {
+      font: normal 600 16px/22px "Open Sans", sans-serif;
+      display: block; }
+    .modal__form-input {
+      display: block;
+      width: 200px;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #95989a;
+      font: normal 400 16px/23px "Open Sans", sans-serif;
+      margin: 10px auto 30px; }
+    .modal__form-submit {
+      width: 150px;
+      height: 60px;
+      font: normal 700 13px/18px "Open Sans", sans-serif;
+      background-color: #08a6e4;
+      color: #fff;
+      border: none;
+      border-radius: 35px;
+      box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+      cursor: pointer; }
+
+.alert {
+  outline: solid 2px red;
+  border-radius: 5px; }

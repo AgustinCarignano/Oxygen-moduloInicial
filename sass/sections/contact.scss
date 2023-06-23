@@ -53,6 +53,13 @@
       border-radius: 35px;
       box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
       cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:disabled {
+        background-color: #08a6e495;
+      }
     }
   }
 }
@@ -86,14 +93,19 @@
   }
   &__terms {
     position: absolute;
-    right: 10px;
+    right: 0;
     top: 0;
-    width: 86%;
+    width: 90%;
     font: $Open-400-16;
     line-height: 16px;
     font-size: 12px;
     color: #707070;
   }
+}
+
+.alert {
+  outline: solid 2px red;
+  border-radius: 5px;
 }
 
 @media (min-width: 1000px) {

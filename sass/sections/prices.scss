@@ -1,4 +1,16 @@
 .prices {
+  position: relative;
+  &__currentOption {
+    position: absolute;
+    font: $Open-300-40;
+    font-size: 13px;
+    color: #a5a5a5;
+    top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    cursor: pointer;
+  }
   &__title {
     font: $Raleway-400-35;
     text-align: center;
@@ -53,14 +65,33 @@
       height: 50px;
       border-radius: 23px;
       border: none;
+      transition: all 0.2s;
       cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
+}
+
+.priceUnit {
+  font-size: 15px;
+  margin-left: -8px;
+}
+
+.selected {
+  color: black;
+  font-weight: 600;
 }
 
 .basic {
   &-card {
     border: 1px solid $pink;
+    // transition: all 0.3s;
+    // &:hover {
+    //   box-shadow: 5px 10px 27px rgba(251, 59, 101, 0.3);
+    //   transform: scale(1.1);
+    // }
   }
   &-price {
     color: $pink;
@@ -72,9 +103,12 @@
 .pro {
   &-card {
     border: 1px solid #07ace6;
-    box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
-    transform: scale(1.1);
     margin-top: 70px;
+    // transition: all 0.3s;
+    // &:hover {
+    //   box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.3);
+    //   transform: scale(1.1);
+    // }
   }
   &-price {
     color: #07ace6;
@@ -87,6 +121,11 @@
   &-card {
     border: 1px solid $sky;
     margin-top: 70px;
+    // transition: all 0.3s;
+    // &:hover {
+    //   box-shadow: 5px 10px 27px rgba(85, 223, 179, 0.3);
+    //   transform: scale(1.1);
+    // }
   }
   &-price {
     color: $sky;
@@ -116,6 +155,9 @@
       grid-column-start: 1;
       grid-column-end: 4;
     }
+    &__currentOption {
+      top: 75px;
+    }
     &__card {
       margin: 0;
       max-width: 372px;
@@ -141,6 +183,33 @@
       &-item {
         width: fit-content;
         margin: 0;
+      }
+    }
+  }
+  .basic {
+    &-card {
+      transition: all 0.3s;
+      &:hover {
+        box-shadow: 5px 10px 27px rgba(251, 59, 101, 0.3);
+        transform: scale(1.1);
+      }
+    }
+  }
+  .pro {
+    &-card {
+      transition: all 0.3s;
+      &:hover {
+        box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.3);
+        transform: scale(1.1);
+      }
+    }
+  }
+  .premium {
+    &-card {
+      transition: all 0.3s;
+      &:hover {
+        box-shadow: 5px 10px 27px rgba(85, 223, 179, 0.3);
+        transform: scale(1.1);
       }
     }
   }
