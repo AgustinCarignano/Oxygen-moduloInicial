@@ -19,6 +19,10 @@
     background-color: $lightBlue;
     margin: 28px auto 50px;
     cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &__image {
     width: 100%;

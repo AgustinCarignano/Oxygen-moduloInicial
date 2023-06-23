@@ -53,7 +53,10 @@ ul {
     border: none;
     background-color: #08a6e4;
     margin: 28px auto 50px;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all 0.3s; }
+    .opening__btn:hover {
+      transform: scale(1.1); }
   .opening__image {
     width: 100%;
     height: 270px;
@@ -342,7 +345,10 @@ ul {
       height: 50px;
       border-radius: 23px;
       border: none;
+      transition: all 0.2s;
       cursor: pointer; }
+      .prices__card-btn:hover {
+        transform: scale(1.1); }
 
 .priceUnit {
   font-size: 15px;
@@ -363,8 +369,6 @@ ul {
 
 .pro-card {
   border: 1px solid #07ace6;
-  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
-  transform: scale(1.1);
   margin-top: 70px; }
 
 .pro-price {
@@ -425,7 +429,22 @@ ul {
         margin: 0 0 20px 20px; }
       .prices__card-item {
         width: fit-content;
-        margin: 0; } }
+        margin: 0; }
+  .basic-card {
+    transition: all 0.3s; }
+    .basic-card:hover {
+      box-shadow: 5px 10px 27px rgba(251, 59, 101, 0.3);
+      transform: scale(1.1); }
+  .pro-card {
+    transition: all 0.3s; }
+    .pro-card:hover {
+      box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.3);
+      transform: scale(1.1); }
+  .premium-card {
+    transition: all 0.3s; }
+    .premium-card:hover {
+      box-shadow: 5px 10px 27px rgba(85, 223, 179, 0.3);
+      transform: scale(1.1); } }
 
 .contact {
   margin: 75px 30px;
@@ -474,7 +493,10 @@ ul {
       border: none;
       border-radius: 35px;
       box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
-      cursor: pointer; }
+      cursor: pointer;
+      transition: all 0.3s; }
+      .contact__form-submit:hover {
+        transform: scale(1.1); }
       .contact__form-submit:disabled {
         background-color: #08a6e495; }
 

@@ -65,7 +65,11 @@
       height: 50px;
       border-radius: 23px;
       border: none;
+      transition: all 0.2s;
       cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }
@@ -83,6 +87,11 @@
 .basic {
   &-card {
     border: 1px solid $pink;
+    // transition: all 0.3s;
+    // &:hover {
+    //   box-shadow: 5px 10px 27px rgba(251, 59, 101, 0.3);
+    //   transform: scale(1.1);
+    // }
   }
   &-price {
     color: $pink;
@@ -94,9 +103,12 @@
 .pro {
   &-card {
     border: 1px solid #07ace6;
-    box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
-    transform: scale(1.1);
     margin-top: 70px;
+    // transition: all 0.3s;
+    // &:hover {
+    //   box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.3);
+    //   transform: scale(1.1);
+    // }
   }
   &-price {
     color: #07ace6;
@@ -109,6 +121,11 @@
   &-card {
     border: 1px solid $sky;
     margin-top: 70px;
+    // transition: all 0.3s;
+    // &:hover {
+    //   box-shadow: 5px 10px 27px rgba(85, 223, 179, 0.3);
+    //   transform: scale(1.1);
+    // }
   }
   &-price {
     color: $sky;
@@ -166,6 +183,33 @@
       &-item {
         width: fit-content;
         margin: 0;
+      }
+    }
+  }
+  .basic {
+    &-card {
+      transition: all 0.3s;
+      &:hover {
+        box-shadow: 5px 10px 27px rgba(251, 59, 101, 0.3);
+        transform: scale(1.1);
+      }
+    }
+  }
+  .pro {
+    &-card {
+      transition: all 0.3s;
+      &:hover {
+        box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.3);
+        transform: scale(1.1);
+      }
+    }
+  }
+  .premium {
+    &-card {
+      transition: all 0.3s;
+      &:hover {
+        box-shadow: 5px 10px 27px rgba(85, 223, 179, 0.3);
+        transform: scale(1.1);
       }
     }
   }
