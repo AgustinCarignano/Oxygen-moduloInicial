@@ -13,13 +13,12 @@
     background-color: #fff;
     color: $lightBlue;
     width: 80%;
-    max-width: 450px;
-    height: 60vh;
+    max-width: 375px;
     top: 20vh;
     left: 0;
     right: 0;
     margin: 0 auto;
-    padding: 20px;
+    padding: 50px 20px;
     border-radius: 20px;
     &-btn {
       position: absolute;
@@ -32,7 +31,7 @@
       }
     }
     &-title {
-      margin-top: 40px;
+      margin-top: 20px;
       font: $Raleway-400-35;
     }
   }
@@ -68,4 +67,25 @@
 .alert {
   outline: solid 2px red;
   border-radius: 5px;
+}
+
+.modalFormSuccess {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8);
+  & > .modal__content {
+    & > .modal__content-title {
+      margin-bottom: 20px;
+    }
+    & .modal__form-submit {
+      margin-top: 30px;
+    }
+  }
+  &__content-text {
+    line-height: 22px;
+  }
 }

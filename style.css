@@ -662,13 +662,12 @@ ul {
     background-color: #fff;
     color: #08a6e4;
     width: 80%;
-    max-width: 450px;
-    height: 60vh;
+    max-width: 375px;
     top: 20vh;
     left: 0;
     right: 0;
     margin: 0 auto;
-    padding: 20px;
+    padding: 50px 20px;
     border-radius: 20px; }
     .modal__content-btn {
       position: absolute;
@@ -679,7 +678,7 @@ ul {
       .modal__content-btn > img {
         width: 30px; }
     .modal__content-title {
-      margin-top: 40px;
+      margin-top: 20px;
       font: normal 400 35px/40px "Raleway", sans-serif; }
   .modal__form {
     margin-top: 40px; }
@@ -708,3 +707,18 @@ ul {
 .alert {
   outline: solid 2px red;
   border-radius: 5px; }
+
+.modalFormSuccess {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8); }
+  .modalFormSuccess > .modal__content > .modal__content-title {
+    margin-bottom: 20px; }
+  .modalFormSuccess > .modal__content .modal__form-submit {
+    margin-top: 30px; }
+  .modalFormSuccess__content-text {
+    line-height: 22px; }

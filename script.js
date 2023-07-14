@@ -10,6 +10,10 @@ const modal = document.getElementById("modal"); //ventana modal que aparece tipo
 const modalContent = document.getElementById("modalContent"); //ventana interior a la modal, muestra el contenido
 const modalCloseBtn = document.getElementById("modalCloseBtn"); //boton para cerral la ventana modal
 let showModal = JSON.parse(localStorage.getItem("showModal")) ?? true; //variable para decidir si mostrar o no la ventana modal
+const formModal = document.getElementById("modalFormSuccess");
+const closeFormModalBtn = document.getElementsByClassName(
+  "modalFormSuccessBtn"
+);
 const prices = document.getElementsByClassName("priceValue"); //Valores de los planes de la sección "prices"
 const currents = document.getElementsByClassName("current"); //Opciones de unidades monetarias
 
@@ -95,7 +99,8 @@ form.addEventListener("submit", async (e) => {
     });
     const jsonData = await response.json();
     console.log(jsonData.body);
-    submitBtn.disabled = false;
+    formModal.style.display = "block";
+    modalFromBehaviour();
     termsBox.checked = false;
     name.value = "";
     email.value = "";
@@ -108,6 +113,26 @@ form.addEventListener("submit", async (e) => {
     email.classList.remove("alert");
   });
 });
+
+function modalFromBehaviour() {
+  for (let i = 0; i < closeFormModalBtn.length; i++) {
+    closeFormModalBtn[i].addEventListener("click", () => {
+      formModal.style.display = "none";
+    });
+  }
+  //Presión de la tecla "escape"
+  window.addEventListener("keyup", (e) => {
+    if (e.key === "Escape") {
+      formModal.style.display = "none";
+    }
+  });
+  //Click fuera de la ventana modal de contenido
+  formModal.addEventListener("click", (e) => {
+    if (!modalContent.contains(e.target)) {
+      formModal.style.display = "none";
+    }
+  });
+}
 
 //Evento para habilitar o deshabilitar el formulario al checkear el input
 termsBox.addEventListener("change", () => {
