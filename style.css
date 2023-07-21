@@ -13,7 +13,8 @@ body {
 a:visited,
 a:link,
 a:active {
-  text-decoration: none; }
+  text-decoration: none;
+  color: unset; }
 
 ul {
   list-style: none; }
@@ -674,7 +675,8 @@ ul {
       top: 15px;
       right: 15px;
       border: none;
-      background-color: transparent; }
+      background-color: transparent;
+      cursor: pointer; }
       .modal__content-btn > img {
         width: 30px; }
     .modal__content-title {
