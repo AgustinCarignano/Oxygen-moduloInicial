@@ -1,344 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>OXYGEN Shop</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="loadBar" id="loadBar"></div>
-      <nav class="header__nav">
-        <h1 class="header__nav-title">OXYGENShop</h1>
-        <button class="header__nav-btn toggleBtn" id="toggleNavBtn">
-          <div></div>
-          <div></div>
-          <div></div>
-        </button>
-        <ul class="header__nav-list" id="navBar">
-          <li class="nav-item">
-            <a class="nav-item__link nav-item__link-active" href="#success"
-              >WHY US</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-item__link" href="#benefits">BENEFITS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-item__link" href="#prices">PRICES</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-item__link" href="#contact">CONTACT</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section class="opening" id="opening">
-        <h2 class="opening__title">Sell More!</h2>
-        <p class="opening__body">
-          Open your shop in our platform and increase your sales.
-        </p>
-        <button class="opening__btn">Open your shop</button>
-        <div class="opening__image"></div>
-      </section>
-      <section class="success" id="success">
-        <h2 class="success__title">
-          The most popular sales platform in country
-        </h2>
-        <div class="success__flex">
-          <div>
-            <figure class="success__figure">
-              <img
-                class="success__figure-img"
-                src="./images/person-2-svgrepo-com.svg"
-                alt="person icon"
-              />
-              <figcaption class="success__figure-capt">100000+</figcaption>
-            </figure>
-            <p class="success__text">daily entries</p>
-          </div>
-          <div>
-            <figure class="success__figure">
-              <img
-                class="success__figure-img"
-                src="./images/eye-svgrepo-com.svg"
-                alt="eye icon"
-              />
-              <figcaption class="success__figure-capt">2000000+</figcaption>
-            </figure>
-            <p class="success__text">seen products every day</p>
-          </div>
-          <div>
-            <figure class="success__figure">
-              <img
-                class="success__figure-img"
-                src="./images/files-svgrepo-com.svg"
-                alt="files icon"
-              />
-              <figcaption class="success__figure-capt">10000+</figcaption>
-            </figure>
-            <p class="success__text">adeed post daily</p>
-          </div>
-        </div>
-      </section>
-      <section class="benefits" id="benefits">
-        <div class="benefits__card benefits__card-first">
-          <img
-            class="benefits__card-img"
-            src="./images/macBook2.svg"
-            alt="macbook 2"
-          />
-          <div class="benefits__card-largeCont">
-            <h3 class="benefits__card-title">Be always first</h3>
-            <p class="benefits__card-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </p>
-            <div class="benefits__card-line firstLine"></div>
-          </div>
-        </div>
-        <div class="benefits__card benefits__card-second">
-          <img
-            class="benefits__card-img"
-            src="./images/iPhone2.svg"
-            alt="iPhone 2"
-          />
-          <div class="benefits__card-largeCont">
-            <h3 class="benefits__card-title">Your shop is where you are!</h3>
-            <p class="benefits__card-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
-            </p>
-            <div class="benefits__card-line secondLine"></div>
-          </div>
-        </div>
-        <div class="benefits__card benefits__card-last">
-          <div class="benefits__card-largeCont lastCard_container">
-            <div class="lastCard_container-div">
-              <h3 class="benefits__card-title benefits__card-topTitle">
-                Increase recognition your brand!
-              </h3>
-              <p class="benefits__card-text benefits__card-topText">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam.
-              </p>
-              <div class="benefits__card-line lastLine"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>OXYGEN Shop</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="loadBar" id="loadBar"></div>
+            <nav class="header__nav">
+                <h1 class="header__nav-title">OXYGENShop</h1>
+                <button class="header__nav-btn toggleBtn" id="toggleNavBtn">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <ul class="header__nav-list" id="navBar">
+                    <li class="nav-item">
+                        <a class="nav-item__link nav-item__link-active" href="#success">WHY US</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item__link" href="#benefits">BENEFITS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item__link" href="#prices">PRICES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-item__link" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="opening" id="opening">
+                <h2 class="opening__title">Sell More!</h2>
+                <p class="opening__body">Open your shop in our platform and increase your sales.</p>
+                <button class="opening__btn">Open your shop</button>
+                <div class="opening__image"></div>
+            </section>
+            <section class="success" id="success">
+                <h2 class="success__title">The most popular sales platform in country</h2>
+                <div class="success__flex">
+                    <div>
+                        <figure class="success__figure">
+                            <img class="success__figure-img" src="./images/person-2-svgrepo-com.svg" alt="person icon" />
+                            <figcaption class="success__figure-capt">100000+</figcaption>
+                        </figure>
+                        <p class="success__text">daily entries</p>
+                    </div>
+                    <div>
+                        <figure class="success__figure">
+                            <img class="success__figure-img" src="./images/eye-svgrepo-com.svg" alt="eye icon" />
+                            <figcaption class="success__figure-capt">2000000+</figcaption>
+                        </figure>
+                        <p class="success__text">seen products every day</p>
+                    </div>
+                    <div>
+                        <figure class="success__figure">
+                            <img class="success__figure-img" src="./images/files-svgrepo-com.svg" alt="files icon" />
+                            <figcaption class="success__figure-capt">10000+</figcaption>
+                        </figure>
+                        <p class="success__text">adeed post daily</p>
+                    </div>
+                </div>
+            </section>
+            <section class="benefits" id="benefits">
+                <div class="benefits__card benefits__card-first">
+                    <img class="benefits__card-img" src="./images/macBook2.svg" alt="macbook 2" />
+                    <div class="benefits__card-largeCont">
+                        <h3 class="benefits__card-title">Be always first</h3>
+                        <p class="benefits__card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <div class="benefits__card-line firstLine"></div>
+                    </div>
+                </div>
+                <div class="benefits__card benefits__card-second">
+                    <img class="benefits__card-img" src="./images/iPhone2.svg" alt="iPhone 2" />
+                    <div class="benefits__card-largeCont">
+                        <h3 class="benefits__card-title">Your shop is where you are!</h3>
+                        <p class="benefits__card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        <div class="benefits__card-line secondLine"></div>
+                    </div>
+                </div>
+                <div class="benefits__card benefits__card-last">
+                    <div class="benefits__card-largeCont lastCard_container">
+                        <div class="lastCard_container-div">
+                            <h3 class="benefits__card-title benefits__card-topTitle">Increase recognition your brand!</h3>
+                            <p class="benefits__card-text benefits__card-topText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            <div class="benefits__card-line lastLine"></div>
+                        </div>
+                    </div>
+                    <figure class="benefits__card-bottomImg lastCard_container-fig">
+                        <img class="benefits__card-img" src="./images/trumpet.svg" alt="a trumpet" />
+                    </figure>
+                </div>
+            </section>
+            <section class="prices" id="prices">
+                <h2 class="prices__title">Pricing</h2>
+                <small class="prices__currentOption">
+                    <span class="current selected">EUR</span> - <span class="current">USD</span> -
+                    <span class="current">GBP</span>
+                </small>
+                <div class="prices__card basic-card">
+                    <div class="prices__card-left">
+                        <h4 class="prices__card-title">Basic</h4>
+                        <p class="prices__card-price basic-price priceValue">0 <small class="priceUnit">EUR</small></p>
+                    </div>
+                    <ul class="prices__card-right">
+                        <li class="prices__card-item checked">100 MB HDD</li>
+                        <li class="prices__card-item checked">1 Subdomain</li>
+                        <li class="prices__card-item checked">2 E-mails</li>
+                        <li class="prices__card-item noChecked">Two years license</li>
+                        <li class="prices__card-item noChecked">Full support</li>
+                    </ul>
+                    <button class="prices__card-btn basic-btn">Begin</button>
+                </div>
+                <div class="prices__card pro-card">
+                    <div class="prices__card-left">
+                        <h4 class="prices__card-title">Professional</h4>
+                        <p class="prices__card-price pro-price priceValue">25 <small class="priceUnit">EUR</small></p>
+                        <small class="prices__card-offer">Limited offer</small>
+                    </div>
+                    <ul class="prices__card-right">
+                        <li class="prices__card-item checked">500 MB HDD</li>
+                        <li class="prices__card-item checked">2 Subdomain</li>
+                        <li class="prices__card-item checked">5 E-mails</li>
+                        <li class="prices__card-item checked">One years license</li>
+                        <li class="prices__card-item noChecked">Full support</li>
+                    </ul>
+                    <button class="prices__card-btn pro-btn">Begin</button>
+                </div>
+                <div class="prices__card premium-card">
+                    <div class="prices__card-left">
+                        <h4 class="prices__card-title">Premium</h4>
+                        <p class="prices__card-price premium-price priceValue">60 <small class="priceUnit">EUR</small></p>
+                        <small class="prices__card-offer">Limited offer</small>
+                    </div>
+                    <ul class="prices__card-right">
+                        <li class="prices__card-item checked">2 GB HDD</li>
+                        <li class="prices__card-item checked">5 Subdomain</li>
+                        <li class="prices__card-item checked">20 E-mails</li>
+                        <li class="prices__card-item checked">Two years license</li>
+                        <li class="prices__card-item checked">Full support</li>
+                    </ul>
+                    <button class="prices__card-btn premium-btn">Begin</button>
+                </div>
+            </section>
+            <div class="slider" id="slider">
+                <span class="slider__controls slider-prevImg" id="prevImg"><img src="./images/controlArrow.svg" /></span>
+                <span class="slider__controls slider-nextImg" id="nextImg"><img src="./images/controlArrow.svg" /></span>
+                <img src="https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&w=600" />
+                <img src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=600" hidden />
+                <img src="https://images.pexels.com/photos/2258536/pexels-photo-2258536.jpeg?auto=compress&cs=tinysrgb&w=600" hidden />
+                <img src="https://images.pexels.com/photos/1366922/pexels-photo-1366922.jpeg?auto=compress&cs=tinysrgb&w=600" hidden />
+                <img src="https://images.pexels.com/photos/2922672/pexels-photo-2922672.jpeg?auto=compress&cs=tinysrgb&w=600" hidden />
+                <div class="slider__position">
+                    <span class="slider__position-item active"></span>
+                    <span class="slider__position-item"></span>
+                    <span class="slider__position-item"></span>
+                    <span class="slider__position-item"></span>
+                    <span class="slider__position-item"></span>
+                </div>
             </div>
-          </div>
-          <figure class="benefits__card-bottomImg lastCard_container-fig">
-            <img
-              class="benefits__card-img"
-              src="./images/trumpet.svg"
-              alt="a trumpet"
-            />
-          </figure>
-        </div>
-      </section>
-      <section class="prices" id="prices">
-        <h2 class="prices__title">Pricing</h2>
-        <small class="prices__currentOption">
-          <span class="current selected">EUR</span> -
-          <span class="current">USD</span> -
-          <span class="current">GBP</span>
-        </small>
-        <div class="prices__card basic-card">
-          <div class="prices__card-left">
-            <h4 class="prices__card-title">Basic</h4>
-            <p class="prices__card-price basic-price priceValue">
-              0 <small class="priceUnit">EUR</small>
-            </p>
-          </div>
-          <ul class="prices__card-right">
-            <li class="prices__card-item checked">100 MB HDD</li>
-            <li class="prices__card-item checked">1 Subdomain</li>
-            <li class="prices__card-item checked">2 E-mails</li>
-            <li class="prices__card-item noChecked">Two years license</li>
-            <li class="prices__card-item noChecked">Full support</li>
-          </ul>
-          <button class="prices__card-btn basic-btn">Begin</button>
-        </div>
-        <div class="prices__card pro-card">
-          <div class="prices__card-left">
-            <h4 class="prices__card-title">Professional</h4>
-            <p class="prices__card-price pro-price priceValue">
-              25 <small class="priceUnit">EUR</small>
-            </p>
-            <small class="prices__card-offer">Limited offer</small>
-          </div>
-          <ul class="prices__card-right">
-            <li class="prices__card-item checked">500 MB HDD</li>
-            <li class="prices__card-item checked">2 Subdomain</li>
-            <li class="prices__card-item checked">5 E-mails</li>
-            <li class="prices__card-item checked">One years license</li>
-            <li class="prices__card-item noChecked">Full support</li>
-          </ul>
-          <button class="prices__card-btn pro-btn">Begin</button>
-        </div>
-        <div class="prices__card premium-card">
-          <div class="prices__card-left">
-            <h4 class="prices__card-title">Premium</h4>
-            <p class="prices__card-price premium-price priceValue">
-              60 <small class="priceUnit">EUR</small>
-            </p>
-            <small class="prices__card-offer">Limited offer</small>
-          </div>
-          <ul class="prices__card-right">
-            <li class="prices__card-item checked">2 GB HDD</li>
-            <li class="prices__card-item checked">5 Subdomain</li>
-            <li class="prices__card-item checked">20 E-mails</li>
-            <li class="prices__card-item checked">Two years license</li>
-            <li class="prices__card-item checked">Full support</li>
-          </ul>
-          <button class="prices__card-btn premium-btn">Begin</button>
-        </div>
-      </section>
-      <div class="slider" id="slider">
-        <span class="slider__controls slider-prevImg" id="prevImg"
-          ><img src="./images/controlArrow.svg"
-        /></span>
-        <span class="slider__controls slider-nextImg" id="nextImg"
-          ><img src="./images/controlArrow.svg"
-        /></span>
-        <img
-          src="https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&w=600"
-        />
-        <img
-          src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=600"
-          hidden
-        />
-        <img
-          src="https://images.pexels.com/photos/2258536/pexels-photo-2258536.jpeg?auto=compress&cs=tinysrgb&w=600"
-          hidden
-        />
-        <img
-          src="https://images.pexels.com/photos/1366922/pexels-photo-1366922.jpeg?auto=compress&cs=tinysrgb&w=600"
-          hidden
-        />
-        <img
-          src="https://images.pexels.com/photos/2922672/pexels-photo-2922672.jpeg?auto=compress&cs=tinysrgb&w=600"
-          hidden
-        />
-        <div class="slider__position">
-          <span class="slider__position-item active"></span>
-          <span class="slider__position-item"></span>
-          <span class="slider__position-item"></span>
-          <span class="slider__position-item"></span>
-          <span class="slider__position-item"></span>
-        </div>
-      </div>
-      <section class="contact" id="contact">
-        <div class="contact__large">
-          <h2 class="contact__title">Any questions?</h2>
-          <p class="contact__text">Leave your email address or call us!</p>
-          <div class="contact__dates">
-            <img src="./images/envelope-svgrepo-com.svg" alt="envolope icon" />
-            <p class="contact__dates-text">info@bestshop.xyz</p>
-          </div>
-          <div class="contact__dates">
-            <img src="./images/phone-svgrepo-com.svg" alt="phone icon" />
-            <p class="contact__dates-text">123 456 789</p>
-          </div>
-        </div>
-        <form class="contact__form" action="" autocomplete="off" id="form">
-          <label class="contact__form-label" for="name">NAME</label>
-          <input
-            class="contact__form-input"
-            type="text"
-            id="name"
-            name="name"
-          />
-          <label class="contact__form-label" for="email">EMAIL</label>
-          <input
-            class="contact__form-input"
-            type="email"
-            id="email"
-            name="email"
-          />
-          <div class="checkContainer">
-            <input
-              class="checkContainer__box"
-              type="checkbox"
-              name="terms"
-              id="terms"
-            />
-            <label class="checkContainer__terms" for="terms"
-              >I hereby give consent for my personal data included in my
-              application to be processed for the purposes of the recruitment
-              process under the European Parliament’s and Council of the
-              European Union Regulation on the Protection of Natural Persons as
-              of 27 April 2016, with regard to the processing of personal data
-              and on the free movement of such data, and repealing Directive
-              95/46/EC (Data Protection Directive)</label
-            >
-          </div>
-          <div class="contact__form-submitCont">
-            <input
-              class="contact__form-submit"
-              type="submit"
-              id="submit"
-              value="Send"
-              disabled
-            />
-          </div>
-        </form>
-      </section>
-      <div class="modal" id="modal">
-        <div class="modal__content" id="modalContent">
-          <button class="modal__content-btn" id="modalCloseBtn">
-            <img src="./images/closeIcon.svg" alt="close window icon" />
-          </button>
-          <h3 class="modal__content-title">Subscribe to our newsletter</h3>
-          <form class="modal__form" id="formNews" autocomplete="off">
-            <label class="modal__form-label" for="emailNews">Email</label>
-            <input
-              class="modal__form-input"
-              type="email"
-              name="emailNews"
-              id="emailNews"
-            />
-            <input class="modal__form-submit" type="submit" value="Subscribe" />
-          </form>
-        </div>
-      </div>
-      <div class="modalFormSuccess" id="modalFormSuccess">
-        <div class="modal__content" id="modalContent">
-          <button class="modal__content-btn modalFormSuccessBtn">
-            <img src="./images/closeIcon.svg" alt="close window icon" />
-          </button>
-          <h3 class="modal__content-title">¡Thank you for contact us!</h3>
-          <p class="modalFormSuccess__content-text">
-            We have received it correctly.
-          </p>
-          <p class="modalFormSuccess__content-text">
-            Someone from our team will get back to you very soon.
-          </p>
-          <button class="modal__form-submit modalFormSuccessBtn">Close</button>
-        </div>
-      </div>
-      <button class="arrowUp" id="arrowUp">
-        <img src="./images/arrowUp.svg" alt="arrow icon" />
-      </button>
-    </main>
-    <footer class="footer">
-      <div class="footer-large">
-        <div class="footer__left">
-          <h3 class="footer__left-title">OXYGENShop</h3>
-          <small class="footer__left-cr"
-            >© 2022 OXYGEN, All Rights Reserved</small
-          >
-        </div>
-        <div class="footer__right">
-          <img src="./images/twitter-svgrepo-com.svg" alt="twitter logo" />
-          <img src="./images/facebook-svgrepo-com.svg" alt="facebook logo" />
-        </div>
-      </div>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+            <section class="contact" id="contact">
+                <div class="contact__large">
+                    <h2 class="contact__title">Any questions?</h2>
+                    <p class="contact__text">Leave your email address or call us!</p>
+                    <div class="contact__dates">
+                        <img src="./images/envelope-svgrepo-com.svg" alt="envolope icon" />
+                        <p class="contact__dates-text">info@bestshop.xyz</p>
+                    </div>
+                    <div class="contact__dates">
+                        <img src="./images/phone-svgrepo-com.svg" alt="phone icon" />
+                        <p class="contact__dates-text">123 456 789</p>
+                    </div>
+                </div>
+                <form class="contact__form" action="" autocomplete="off" id="form">
+                    <label class="contact__form-label" for="name">NAME</label>
+                    <input class="contact__form-input" type="text" id="name" name="name" />
+                    <label class="contact__form-label" for="email">EMAIL</label>
+                    <input class="contact__form-input" type="email" id="email" name="email" />
+                    <div class="checkContainer">
+                        <input class="checkContainer__box" type="checkbox" name="terms" id="terms" />
+                        <label class="checkContainer__terms" for="terms">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
+                    </div>
+                    <div class="contact__form-submitCont">
+                        <input class="contact__form-submit" type="submit" id="submit" value="Send" disabled />
+                    </div>
+                </form>
+            </section>
+            <div class="modal" id="modal">
+                <div class="modal__content" id="modalContent">
+                    <button class="modal__content-btn" id="modalCloseBtn">
+                        <img src="./images/closeIcon.svg" alt="close window icon" />
+                    </button>
+                    <h3 class="modal__content-title">Subscribe to our newsletter</h3>
+                    <form class="modal__form" id="formNews" autocomplete="off">
+                        <label class="modal__form-label" for="emailNews">Email</label>
+                        <input class="modal__form-input" type="email" name="emailNews" id="emailNews" />
+                        <input class="modal__form-submit" type="submit" value="Subscribe" />
+                    </form>
+                </div>
+            </div>
+            <div class="modalFormSuccess" id="modalFormSuccess">
+                <div class="modal__content" id="modalContent">
+                    <button class="modal__content-btn modalFormSuccessBtn">
+                        <img src="./images/closeIcon.svg" alt="close window icon" />
+                    </button>
+                    <h3 class="modal__content-title" id="modalTitle"></h3>
+                    <p class="modalFormSuccess__content-text" id="modalText1"></p>
+                    <p class="modalFormSuccess__content-text" id="modalText2"></p>
+                    <button class="modal__form-submit modalFormSuccessBtn">Close</button>
+                </div>
+            </div>
+            <button class="arrowUp" id="arrowUp">
+                <img src="./images/arrowUp.svg" alt="arrow icon" />
+            </button>
+        </main>
+        <footer class="footer">
+            <div class="footer-large">
+                <div class="footer__left">
+                    <h3 class="footer__left-title">OXYGENShop</h3>
+                    <small class="footer__left-cr">© 2022 OXYGEN, All Rights Reserved</small>
+                </div>
+                <div class="footer__right">
+                    <img src="./images/twitter-svgrepo-com.svg" alt="twitter logo" />
+                    <img src="./images/facebook-svgrepo-com.svg" alt="facebook logo" />
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
 </html>
